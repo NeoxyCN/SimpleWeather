@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">简单天气</string>
+    <string name="slogan_midnight">深夜了，该睡觉了。</string>
+    <string name="slogan_morning">早上好！</string>
+    <string name="slogan_afternoon">午安！</string>
+    <string name="slogan_evening">晚安</string>
+    <string name="slogan_default">你好</string>
+</resources>

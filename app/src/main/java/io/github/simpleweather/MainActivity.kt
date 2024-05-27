@@ -24,16 +24,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import io.github.simpleweather.net.getAsync
 import io.github.simpleweather.ui.theme.SimpleWeatherTheme
+import io.github.simpleweather.weather.FetchCity
 import java.util.Locale
 
 class MainActivity : ComponentActivity() {
     @ExperimentalMaterial3Api
     override fun onCreate(savedInstanceState: Bundle?) {
-        getAsync("https://www.baidu.com") { responseBody ->
-            Log.d("Net", responseBody)
-        }
+//        getAsync("https://www.baidu.com") { responseBody ->
+//            Log.d("Net", responseBody)
+//        }
+
+
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -88,6 +90,8 @@ class MainActivity : ComponentActivity() {
 }
 
 fun GetSlogan(context: Context): String {
+    FetchCity(context,"Beijing")
+
     val time = System.currentTimeMillis()
     val dateFormat = SimpleDateFormat("HH", Locale.getDefault())
     val currentHour = dateFormat.format(time).toInt()

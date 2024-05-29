@@ -15,8 +15,13 @@ fun FetchCity(context: Context, province: String) {
     getAsync(ProvinceUrl) { responseBody ->
         rawData = responseBody
     }
-    Log.d("FetchCity", rawData);
-    val rawArray = JSONArray(rawData)
-    val size = rawArray.length()
-    Log.d("FetchCity", size.toString());
+    if (rawData != ""){
+        Log.d("FetchCity", rawData);
+        val rawArray = JSONArray(rawData)
+        val size = rawArray.length()
+        Log.d("FetchCity", size.toString());
+    }else{
+        Log.d("FetchCity", "failed to fetch raw data");
+    }
+
 }
